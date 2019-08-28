@@ -1,0 +1,991 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Wit",
+				"withdraw"
+			],
+			[
+				"with",
+				"withdrawl"
+			],
+			[
+				"team",
+				"team_motto"
+			],
+			[
+				"te",
+				"team_motto"
+			],
+			[
+				"pig",
+				"pig_latin_word"
+			],
+			[
+				"vowel",
+				"vowel_index"
+			],
+			[
+				"an",
+				"analyzed_text"
+			],
+			[
+				"text",
+				"text_from_user"
+			],
+			[
+				"reve",
+				"reversed"
+			],
+			[
+				"re",
+				"reversed_string"
+			],
+			[
+				"search",
+				"search_term"
+			],
+			[
+				"lo",
+				"lowest_rating"
+			],
+			[
+				"dir",
+				"director"
+			],
+			[
+				"release",
+				"release_date"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"valu",
+				"values_for_insert"
+			],
+			[
+				"table",
+				"table_name_for_insert"
+			],
+			[
+				"tbale",
+				"table_name"
+			],
+			[
+				"col",
+				"col_names_for_insert"
+			],
+			[
+				"tabel",
+				"table_name"
+			],
+			[
+				"new",
+				"new_from_db"
+			],
+			[
+				"all",
+				"all_students_in_grade_X"
+			],
+			[
+				"first",
+				"first_X_students_in_grade_10"
+			],
+			[
+				"ch",
+				"characters"
+			],
+			[
+				"char",
+				"character_books"
+			],
+			[
+				"su",
+				"subgenre"
+			],
+			[
+				"sub",
+				"subgenre"
+			],
+			[
+				"boo",
+				"book_id"
+			],
+			[
+				"author",
+				"author_id"
+			],
+			[
+				"autho",
+				"author_id"
+			],
+			[
+				"serie",
+				"series_id"
+			],
+			[
+				"p",
+				"project_id"
+			],
+			[
+				"pr",
+				"projects"
+			],
+			[
+				"select",
+				"SELECT"
+			],
+			[
+				"user",
+				"users"
+			],
+			[
+				"i",
+				"INTEGER"
+			],
+			[
+				"S",
+				"SELECT"
+			],
+			[
+				"max",
+				"max_less_zero_str"
+			],
+			[
+				"ma",
+				"max_less_three_str"
+			],
+			[
+				"max_",
+				"max_less_three_str"
+			],
+			[
+				"get",
+				"get_lat_long"
+			],
+			[
+				"plan",
+				"plan_route"
+			],
+			[
+				"make",
+				"make_navaids"
+			],
+			[
+				"sec",
+				"section_content"
+			],
+			[
+				"section",
+				"section_content"
+			],
+			[
+				"choice",
+				"choice_int"
+			],
+			[
+				"each",
+				"each_pair"
+			],
+			[
+				"create",
+				"create_details_keys"
+			],
+			[
+				"run",
+				"runways_table"
+			],
+			[
+				"runway",
+				"runway_names"
+			],
+			[
+				"runw",
+				"runway_data"
+			],
+			[
+				"creat",
+				"create_runway_from_data"
+			],
+			[
+				"display",
+				"display_matches"
+			],
+			[
+				"main",
+				"main_menu_prompt"
+			],
+			[
+				"learn",
+				"learn_more_prompt"
+			],
+			[
+				"se",
+				"select_from_matches_input"
+			],
+			[
+				"select_from_matches_",
+				"select_from_matches_prompt"
+			],
+			[
+				"matches",
+				"matches_input"
+			],
+			[
+				"select_from",
+				"select_from_matches_prompt"
+			],
+			[
+				"matc",
+				"matches_input"
+			],
+			[
+				"che",
+				"check_matches"
+			],
+			[
+				"choo",
+				"choose_location_prompt"
+			],
+			[
+				"choose",
+				"choose_location_input"
+			],
+			[
+				"choose_locatoin",
+				"choose_location_decision"
+			],
+			[
+				"gets",
+				"gets_and_hand_off"
+			],
+			[
+				"show",
+				"show_runway_info"
+			],
+			[
+				"ru",
+				"runways_table"
+			],
+			[
+				"gchilds",
+				"gchilds_counts"
+			],
+			[
+				"runways_",
+				"runways_table"
+			],
+			[
+				"return",
+				"return_to_main_menu"
+			],
+			[
+				"subs",
+				"sub_split"
+			],
+			[
+				"sect",
+				"section_heading"
+			],
+			[
+				"chil",
+				"children"
+			],
+			[
+				"det",
+				"details_array"
+			],
+			[
+				"runwa",
+				"runways_table"
+			],
+			[
+				"content",
+				"content_table"
+			],
+			[
+				"find",
+				"find_or_create"
+			],
+			[
+				"airp",
+				"airport_select"
+			],
+			[
+				"td",
+				"td_array"
+			],
+			[
+				"retru",
+				"return_data"
+			],
+			[
+				"air",
+				"airport"
+			],
+			[
+				"detail",
+				"details_hash"
+			],
+			[
+				"ide",
+				"identifier"
+			],
+			[
+				"airpo",
+				"airport_name"
+			],
+			[
+				"down",
+				"downcase"
+			],
+			[
+				"req",
+				"require_relative"
+			],
+			[
+				"past",
+				"past_search"
+			],
+			[
+				"ra",
+				"radius"
+			],
+			[
+				"ok",
+				"ok_one"
+			],
+			[
+				"socil",
+				"social-icon-container"
+			],
+			[
+				"stud",
+				"student-info"
+			],
+			[
+				"student",
+				"student_info"
+			],
+			[
+				"pl",
+				"player_2"
+			],
+			[
+				"win",
+				"WIN_COMBINATIONS"
+			],
+			[
+				"list",
+				"list_songs_by_genre"
+			],
+			[
+				"list_songs",
+				"list_songs_by_genre"
+			],
+			[
+				"ar",
+				"artist_name"
+			],
+			[
+				"file",
+				"file_info"
+			],
+			[
+				"Dir",
+				"Dir\tDir[\"..\"]"
+			],
+			[
+				"proje",
+				"projects"
+			],
+			[
+				"am",
+				"amount"
+			],
+			[
+				"Tra",
+				"TriangleError"
+			],
+			[
+				"Trian",
+				"TriangleError"
+			],
+			[
+				"Tr",
+				"TraingleError"
+			],
+			[
+				"la",
+				"last_name"
+			],
+			[
+				"wh",
+				"wheel_number"
+			],
+			[
+				"app",
+				"appointments"
+			],
+			[
+				"pat",
+				"patient"
+			],
+			[
+				"ge",
+				"genre"
+			],
+			[
+				"gen",
+				"genres"
+			],
+			[
+				"hand",
+				"handleRemoveAll"
+			],
+			[
+				"newOpti",
+				"newOptionValue"
+			],
+			[
+				"Inde",
+				"IndecisionApp"
+			],
+			[
+				"Ind",
+				"IndecisionApp"
+			],
+			[
+				"tal",
+				"TalentedPerson"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"is",
+				"isVisible"
+			],
+			[
+				"button",
+				"buttonText"
+			],
+			[
+				"deci",
+				"decisionBtn"
+			],
+			[
+				"render",
+				"renderIndApp"
+			],
+			[
+				"rende",
+				"renderIndApp"
+			],
+			[
+				"rend",
+				"renderIndApp"
+			],
+			[
+				"mul",
+				"multiplyBy"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 165,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Created by https://www.gitignore.io/api/node\n\n.DS_Store\n\n### Node ###\n# Logs\nlogs\n*.log\nnpm-debug.log*\n\n# Runtime data\npids\n*.pid\n*.seed\n\n# Directory for instrumented libs generated by jscoverage/JSCover\nlib-cov\n\n# Compiled binary addons (http://nodejs.org/api/addons.html)\nbuild/Release\n\n# Dependency directories\nnode_modules\njspm_packages\n\n# Optional npm cache directory\n.npm\n\n# Optional REPL history\n.node_repl_history\n\n# Learn-specific .results.json\n.results.json\n\n# Ignore bundler config.\n/.bundle\n\n# Ignore the default SQLite database.\n/db/*.sqlite3\n/db/*.sqlite3-journal\n\n# Ignore all logfiles and tempfiles.\n/log/*\n!/log/.keep\n/tmp\n\n# Sublime project and workspace\n\n",
+			"file": ".gitignore",
+			"file_size": 0,
+			"file_write_time": 132114100172764237,
+			"settings":
+			{
+				"buffer_size": 676,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"new file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"new fil",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"ren",
+				"Rename File"
+			],
+			[
+				"new folder",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"folder",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"new flie",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"rena",
+				"Rename File"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"new fol",
+				"File: New Folder Relative to Current View"
+			],
+			[
+				"syntax ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"project",
+				"Project: Close"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"jsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"close  pr",
+				"Project: Close"
+			],
+			[
+				"new file root",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"new  file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"new fold",
+				"File: New Folder Relative to Project Root"
+			],
+			[
+				"Snippet: ",
+				"Snippet: script"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"newfil",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/controllers",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/config"
+	],
+	"file_history":
+	[
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/views/new.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/views/recipe.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/views/edit.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/models/recipe.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/app/views/layout.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/db/migrate/20190827042913_create_recipes.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-restful-routes-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/app/views/nsf.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/app/views/account.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/app/models/user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/db/migrate/20190826025844_add_balance_to_user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/app/views/login.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-activerecord-setup-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/db/migrate/20190826022456_create_users.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-secure-password-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/app/models/user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/db/migrate/20180314210852_create_users.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-password-security-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/app/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/app/views/account.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/app/helpers/helpers.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/app/models/user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/db/migrate/20190825030752_create_users.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/app/models/user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/config.ru",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/spec/spec_helper.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-logging-in-and-out-online-web-pt-051319/db/migrate/20190825024038_create_users.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/app/views/registrations/signup.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/app/views/sessions/login.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-user-auth-online-web-pt-051319/db/migrate/20190824211346_create_user.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/app/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/app/views/new.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/app/views/edit.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/app/views/show.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-ar-crud-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/.config/sublime-text-3/Packages/User/sinatra/erb-tag.sublime-snippet",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-activerecord-setup-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-activerecord-setup-online-web-pt-051319/db/migrate/20190824022624_create_dogs.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/activerecord/sinatra-activerecord-setup-online-web-pt-051319/Gemfile",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/activerecord-test/sinatra-activerecord-setup-online-web-pt-051319/Gemfile",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/activerecord-test/sinatra-activerecord-setup-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/activerecord-test/sinatra-activerecord-setup-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-activerecord-setup-online-web-pt-051319/Gemfile",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-activerecord-setup-online-web-pt-051319/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-activerecord-setup-online-web-pt-051319/Rakefile",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-activerecord-setup-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-sessions-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-sessions-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-basic-sessions-lab-online-web-pt-051319/views/checkout.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-basic-sessions-lab-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-basic-sessions-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sessions/sinatra-basic-sessions-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-lab-superheros-online-web-pt-051319/app/views/team.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-lab-superheros-online-web-pt-051319/app/views/super_hero.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-lab-superheros-online-web-pt-051319/app/controllers/application_controller.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/app/models/pirate.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/app/models/ship.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/views/pirates/new.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/views/pirates/show.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-nested-forms-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-forms-lab-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-forms-lab-online-web-pt-051319/views/display_puppy.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-forms-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-forms-lab-online-web-pt-051319/models/puppy.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-lab-online-web-pt-051319/views/pig_latinizer.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-lab-online-web-pt-051319/views/user_input.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-lab-online-web-pt-051319/models/piglatinizer.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-mvc-file-structure-online-web-pt-051319/app/models/model.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-integrating-models-walkthrough-online-web-pt-051319/models/text_analyzer.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-integrating-models-walkthrough-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-integrating-models-walkthrough-online-web-pt-051319/views/results.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-integrating-models-walkthrough-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/basic-sinatra-forms-lab-online-web-pt-051319/views/newteam.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/basic-sinatra-forms-lab-online-web-pt-051319/views/team.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/basic-sinatra-forms-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-view-and-controller-readme-walkthrough-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/basic-sinatra-forms-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-view-and-controller-readme-walkthrough-online-web-pt-051319/views/friends.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-view-and-controller-readme-walkthrough-online-web-pt-051319/views/reversed.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-view-and-controller-readme-walkthrough-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-forms-params-readme-walkthrough-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-forms-params-readme-walkthrough-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-forms-params-readme-walkthrough-online-web-pt-051319/views/food_form.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-dynamic-routes-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-dynamic-routes-lab-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-dynamic-routes-codealong-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-dynamic-routes-codealong-online-web-pt-051319/Gemfile.lock",
+		"/home/jason/learning-dev/learn-co/sinatra/intro-to-capybara-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/intro-to-capybara-online-web-pt-051319/views/greet.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/intro-to-capybara-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/intro-to-capybara-online-web-pt-051319/config.ru",
+		"/home/jason/learning-dev/learn-co/sinatra/intro-to-capybara-online-web-pt-051319/Gemfile",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/config.ru",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/views/date.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/views/goodbye.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-lab-online-web-pt-051319/views/hello.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-boiler/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-boiler/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-views-lab-online-web-pt-051319/app.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-boiler/config/environment.rb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-boiler/LICENSE.md",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-boiler/README.md",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-basic-views-lab-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-online-web-pt-051319/views/info.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-online-web-pt-051319/views/index.erb",
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-views-online-web-pt-051319/app.rb"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pry",
+			"withdrawl",
+			"@"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								675,
+								675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 272.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 120.0
+	},
+	"pinned_build_system": "",
+	"project": "ka-pian.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
