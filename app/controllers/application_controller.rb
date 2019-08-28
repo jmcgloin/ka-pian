@@ -35,14 +35,20 @@ class ApplicationController < Sinatra::Base
 
 	post '/users' do
 		@user = User.new(:username => params[:username], :password => params[:password])
-
+		binding.pry
 		if @user.save
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			error_message = "Oops! There's a probelem with the info you entered. Please try again."
+			@error_message = "Oops! There's a probelem with the info you entered. Please try again."
 			# do  something better here
 		end
+	end
+
+	get '/users/:id' do
+		# make sure this user is currently logged in
+		# then show their account
+	end
 
 	helpers do
 	  def logged_in?
