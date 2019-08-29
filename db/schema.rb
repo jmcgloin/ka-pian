@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_025332) do
+ActiveRecord::Schema.define(version: 2019_08_29_020007) do
 
   create_table "cards", force: :cascade do |t|
     t.string "front"
     t.string "back"
     t.integer "frequency"
     t.string "multiple_choice_or_input"
+    t.integer "deck_id"
   end
 
   create_table "decks", force: :cascade do |t|
