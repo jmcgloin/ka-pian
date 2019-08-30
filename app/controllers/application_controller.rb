@@ -1,3 +1,10 @@
+# Next todo:
+# views, deck, edit
+# 
+# 
+# 
+# 
+
 require "./config/environment"
 
 class ApplicationController < Sinatra::Base
@@ -81,6 +88,18 @@ class ApplicationController < Sinatra::Base
 				)
 
 			redirect to("/users/#{@user.id}") # change this to deck/add cards page
+		else
+			redirect to('/')
+		end
+	end
+
+	get '/users/:id/decks/:deck_id/edit' do
+		if correct_user?(params[:id]) 
+			@user = current_user
+			@deck = Deck.find(params[:deck_id])
+
+			erb :'deck/edit' if !!@deck
+			redirect to("users/#{@user.id}") if !@deck
 		else
 			redirect to('/')
 		end
