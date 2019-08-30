@@ -51,16 +51,48 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/users/:id' do
-		if logged_in?
+		if correct_user?(params[:id])
 			@user = current_user
-			@decks = Deck.find_by(:user_id => @user.id)
+			@decks = Deck.where(:user_id => @user.id)
+			binding.pry
 			erb :'user/show'
 		else
 			redirect to('/')
 		end
 	end
 
+	get '/users/:id/decks/new' do
+		if correct_user?(params[:id])
+			@user = current_user
+			erb :'deck/new'
+		else
+			redirect to('/')
+		end
+	end
 
+	post '/users/:id/decks/new' do
+		if correct_user?(params[:id])
+			@user = current_user
+			@deck = Deck.create(
+				:deck_name => params[:deck_name],
+				:keywords => params[:keywords],
+				:shareable => params[:shareable],
+				:user_id => @user.id
+				)
+
+			redirect to("/users/#{@user.id}") # change this to deck/add cards page
+		else
+			redirect to('/')
+		end
+	end
+
+	delete '/users/:id/decks/:deck_id/delete' do
+		if correct_user?(params[:id])
+			Deck.find(params[:deck_id]).destroy
+
+			redirect to("users/#{params[:id]}")
+		end
+	end
 
 	helpers do
 	  def logged_in?
@@ -69,6 +101,10 @@ class ApplicationController < Sinatra::Base
 
 	  def current_user
 	    User.find(session[:user_id])
+	  end
+
+	  def correct_user?(id)
+	  	logged_in? && (current_user.id.to_s == id.to_s)
 	  end
 	end
 

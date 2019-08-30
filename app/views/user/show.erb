@@ -4,12 +4,12 @@
 <% @decks.each do |deck| %>
 <p><span><%= deck.deck_name %></span>
 	<span>
-		<form action="/decks/<%= deck.id %>/edit" method="GET">
+		<form action="/users/<%= @user.id %>/decks/<%= deck.id %>/edit" method="GET">
 			<input type="submit" value="EDIT">
 		</form>
 	</span>
 	<span>
-		<form action="/decks/<%= deck.id %>/delete" method=POST>
+		<form action="/users/<%= @user.id %>/decks/<%= deck.id %>/delete" method=POST>
 			<input type="hidden" name="_method" value="DELETE">
 			<input type="submit" value="DELETE"> <!-- maybe put in a delete get route with an "are you sure" -->
 		</form>
@@ -19,4 +19,4 @@
 <% else %>
 <p>You do not yet have any decks.  Would you like to create one?</p>
 <% end %>
-<a href="/decks/new"><h2>Create a new deck</h2></a>
+<a href="/users/<%= @user.id %>/decks/new"><h2>Create a new deck</h2></a>
