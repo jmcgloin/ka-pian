@@ -61,7 +61,6 @@ class ApplicationController < Sinatra::Base
 		if correct_user?(params[:id])
 			@user = current_user
 			@decks = Deck.where(:user_id => @user.id)
-			binding.pry
 			erb :'user/show'
 		else
 			redirect to('/')
@@ -93,16 +92,22 @@ class ApplicationController < Sinatra::Base
 		end
 	end
 
-	get '/users/:id/decks/:deck_id/edit' do
-		if correct_user?(params[:id]) 
-			@user = current_user
-			@deck = Deck.find(params[:deck_id])
+	get '/users/:id/decks/:did/edit' do
+		@user = current_user
+		@deck = Deck.find(params[:did])
+		erb :'deck/edit'
+	end
 
-			erb :'deck/edit' if !!@deck
-			redirect to("users/#{@user.id}") if !@deck
-		else
-			redirect to('/')
-		end
+	put '/users/:id/decks/:did/edit' do
+		@deck = Deck.find(params[:did])
+		@deck.update(
+			:deck_name => params[:deck_name],
+			:keywords => params[:keywords],
+			:shareable => params[:shareable]
+			)
+		# binding.pry
+
+		redirect to("/users/#{@deck.user_id}")
 	end
 
 	delete '/users/:id/decks/:deck_id/delete' do
