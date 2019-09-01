@@ -2,7 +2,7 @@
 <% if @decks %>
 <h2>Current Decks</h2>
 <% @decks.each do |deck| %>
-<p><span><%= deck.deck_name %></span>
+<p><a href="/users/<%= @user.id %>/decks/<%= deck.id %>"><%= deck.deck_name %></a>
 	<span>
 		<form action="/users/<%= @user.id %>/decks/<%= deck.id %>/edit" method="GET">
 			<input type="submit" value="EDIT">

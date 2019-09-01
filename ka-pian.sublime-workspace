@@ -507,16 +507,7 @@
 			"file": "app/controllers/application_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1292,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/register.erb",
-			"settings":
-			{
-				"buffer_size": 342,
+				"buffer_size": 3109,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -677,9 +668,9 @@
 	],
 	"file_history":
 	[
+		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/views/register.erb",
 		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/controllers/application_controller.rb",
 		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/views/layout.erb",
-		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/views/register.erb",
 		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/views/welcome.erb",
 		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/app/views/login.erb",
 		"/home/jason/learning-dev/learn-co/sinatra/sinatra-project/ka-pian/Gemfile",
@@ -851,15 +842,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1292,
+						"buffer_size": 3109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1152,
-								1152
+								0,
+								0
 							]
 						],
 						"settings":
@@ -872,34 +863,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/register.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 342,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								262,
-								262
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]

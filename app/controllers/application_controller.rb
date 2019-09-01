@@ -5,7 +5,7 @@
 # 
 # 
 
-require "./config/environment"
+# require "./config/environment"
 
 class ApplicationController < Sinatra::Base
 
@@ -58,65 +58,68 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/users/:id' do
-		if correct_user?(params[:id])
-			@user = current_user
-			@decks = Deck.where(:user_id => @user.id)
-			erb :'user/show'
-		else
-			redirect to('/')
-		end
+		redirect to('/') if !correct_user?(params[:id])
+		@user = current_user
+		@decks = Deck.where(:user_id => @user.id)
+		erb :'user/show'
 	end
 
 	get '/users/:id/decks/new' do
-		if correct_user?(params[:id])
-			@user = current_user
-			erb :'deck/new'
-		else
-			redirect to('/')
-		end
+		redirect to('/') if !correct_user?(params[:id])
+		@user = current_user
+		erb :'deck/new'
 	end
 
 	post '/users/:id/decks/new' do
-		if correct_user?(params[:id])
-			@user = current_user
-			@deck = Deck.create(
-				:deck_name => params[:deck_name],
-				:keywords => params[:keywords],
-				:shareable => params[:shareable],
-				:user_id => @user.id
-				)
+		redirect to('/') if !correct_user?(params[:id])
+		@user = current_user
+		@deck = Deck.create(
+			:deck_name => params[:deck_name],
+			:keywords => params[:keywords],
+			:shareable => params[:shareable],
+			:user_id => @user.id
+			)
 
-			redirect to("/users/#{@user.id}") # change this to deck/add cards page
-		else
-			redirect to('/')
-		end
+		redirect to("/users/#{@user.id}") # change this to deck/add cards page
 	end
 
 	get '/users/:id/decks/:did/edit' do
+		redirect to('/') if !correct_user?(params[:id])
+		# add a check if a deck id that doesn't exist is entered directly to uri
 		@user = current_user
 		@deck = Deck.find(params[:did])
 		erb :'deck/edit'
 	end
 
 	put '/users/:id/decks/:did/edit' do
+		redirect to('/') if !correct_user?(params[:id])
+		# add a check if a deck id that doesn't exist is entered directly to uri
 		@deck = Deck.find(params[:did])
 		@deck.update(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
 			:shareable => params[:shareable]
 			)
-		# binding.pry
 
 		redirect to("/users/#{@deck.user_id}")
 	end
 
-	delete '/users/:id/decks/:deck_id/delete' do
-		if correct_user?(params[:id])
-			Deck.find(params[:deck_id]).destroy
+	get '/users/:id/decks/:did' do
+		@user = current_user
+		@deck = Deck.find(params[:did])
+		@cards = Card.where(:deck_id => @deck.id)
 
-			redirect to("users/#{params[:id]}")
-		end
+		erb :'deck/show'
 	end
+
+	delete '/users/:id/decks/:did/delete' do
+		redirect to('/') if !correct_user?(params[:id])
+		# add a check if a deck id that doesn't exist is entered directly to uri
+		Deck.find(params[:did]).destroy
+
+		redirect to("users/#{params[:id]}")
+	end
+
 
 	helpers do
 	  def logged_in?
