@@ -1,6 +1,5 @@
 class UserController < ApplicationController
 
-
 	get '/users/login' do
 		redirect to("users/#{current_user.id}") if logged_in?
 		@error_message = nil
@@ -13,12 +12,12 @@ class UserController < ApplicationController
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			@error_message = "Oops! There's a probelem with the info you entered. Please try again or <a href='/users/new'>Register</a>."
+			@error_message = "Oops! There's a problem with the info you entered. Please try again or <a href='/users/new'>Register</a>."
 			erb :'user/login'
 		end
 	end
 
-	post '/users/logout' do
+	get '/users/logout' do
 		session.clear
 		redirect to('/')
 	end
@@ -34,7 +33,7 @@ class UserController < ApplicationController
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			@error_message = "Oops! There's a probelem with the info you entered. Please try again."
+			@error_message = "Oops! There's a problem with the info you entered. Please try again."
 			# do  something better here
 		end
 	end

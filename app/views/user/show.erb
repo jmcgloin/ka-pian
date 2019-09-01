@@ -2,14 +2,14 @@
 <% if @decks %>
 <h2>Current Decks</h2>
 <% @decks.each do |deck| %>
-<p><a href="/users/<%= @user.id %>/decks/<%= deck.id %>"><%= deck.deck_name %></a>
+<p><a href="/decks/<%= deck.id %>"><%= deck.deck_name %></a>
 	<span>
-		<form action="/users/<%= @user.id %>/decks/<%= deck.id %>/edit" method="GET">
+		<form action="/decks/<%= deck.id %>/edit" method="GET">
 			<input type="submit" value="EDIT">
 		</form>
 	</span>
 	<span>
-		<form action="/users/<%= @user.id %>/decks/<%= deck.id %>/delete" method=POST>
+		<form action="/decks/<%= deck.id %>/delete" method=POST>
 			<input type="hidden" name="_method" value="DELETE">
 			<input type="submit" value="DELETE"> <!-- maybe put in a delete get route with an "are you sure" -->
 		</form>

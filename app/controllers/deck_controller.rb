@@ -1,13 +1,15 @@
 class DeckController <  ApplicationController
 
-	get '/users/:id/decks/new' do
-		redirect to('/') if !correct_user?(params[:id])
+	get '/decks/new' do
+		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
 		@user = current_user
 		erb :'deck/new'
 	end
 
-	post '/users/:id/decks/new' do
-		redirect to('/') if !correct_user?(params[:id])
+	post '/decks/new' do
+		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
 		@user = current_user
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
@@ -15,20 +17,21 @@ class DeckController <  ApplicationController
 			:shareable => params[:shareable],
 			:user_id => @user.id
 			)
-
+		session[:deck_id] = @deck.id
 		redirect to("/users/#{@user.id}") # change this to deck/add cards page
 	end
 
-	get '/users/:id/decks/:did/edit' do
-		redirect to('/') if !correct_user?(params[:id])
+	get '/decks/:did/edit' do
+		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		@user = current_user
-		@deck = Deck.find(params[:did])
 		erb :'deck/edit'
 	end
 
-	put '/users/:id/decks/:did/edit' do
-		redirect to('/') if !correct_user?(params[:id])
+	put '/decks/:did/edit' do
+		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		@deck = Deck.find(params[:did])
 		@deck.update(
@@ -40,7 +43,8 @@ class DeckController <  ApplicationController
 		redirect to("/users/#{@deck.user_id}")
 	end
 
-	get '/users/:id/decks/:did' do
+	get '/decks/:did' do
+
 		@user = current_user
 		@deck = Deck.find(params[:did])
 		@cards = Card.where(:deck_id => @deck.id)
@@ -48,12 +52,17 @@ class DeckController <  ApplicationController
 		erb :'deck/show'
 	end
 
-	delete '/users/:id/decks/:did/delete' do
+	delete '/decks/:did/delete' do
 		redirect to('/') if !correct_user?(params[:id])
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		Deck.find(params[:did]).destroy
 
 		redirect to("users/#{params[:id]}")
+	end
+
+	error do
+		binding.pry
+		redirect '/'
 	end
 
 end
