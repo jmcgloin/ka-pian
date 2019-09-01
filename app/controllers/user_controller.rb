@@ -1,4 +1,4 @@
-class UserController < Sinatra::Base
+class UserController < ApplicationController
 
 
 	get '/users/login' do
