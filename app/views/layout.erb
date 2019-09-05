@@ -10,7 +10,10 @@
 
 		<nav>
 			navbar goes here
+			<% @user ||= false %>
+			<%  if !!@user %>
 			<a href="/">Home</a>
+			<% end %>
 			
 
 			<% if @user %>

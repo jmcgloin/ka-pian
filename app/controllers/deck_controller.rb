@@ -49,11 +49,12 @@ class DeckController <  ApplicationController
 	end
 
 	delete '/decks/:did/delete' do
-		redirect to('/') if !correct_user?(params[:id])
+		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
 		# add a check if a deck id that doesn't exist is entered directly to uri
-		Deck.find(params[:did]).destroy
+		@deck.destroy
 
-		redirect to("users/#{params[:id]}")
+		redirect to("users/#{current_user.id}")
 	end
 
 	error do

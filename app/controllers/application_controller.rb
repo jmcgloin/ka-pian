@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/' do
+		logged_in? && (redirect to("/users/#{current_user.id}"))
 		erb :welcome
 	end
 
@@ -32,7 +33,7 @@ class ApplicationController < Sinatra::Base
 	  end
 
 	  def current_user
-	    User.find(session[:user_id])
+	    !!session[:user_id] && User.find(session[:user_id])
 	  end
 
 	  def current_deck
