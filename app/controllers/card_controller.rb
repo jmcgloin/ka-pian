@@ -15,6 +15,7 @@ class CardController <  ApplicationController
 			:deck_id => @deck.id,
 			:frequency => 1
 			)
+		binding.pry
 
 		redirect to("/cards/#{@card.id}")
 	end
