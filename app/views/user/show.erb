@@ -1,5 +1,5 @@
 <h1>Hello, <%= @user.username %></h1>
-<% if @decks %>
+<% if !@decks.empty? %>
 <h2>Current Decks</h2>
 <% @decks.each do |deck| %>
 <p><a href="/decks/<%= deck.id %>"><%= deck.deck_name %></a>
