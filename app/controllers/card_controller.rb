@@ -8,10 +8,12 @@ class CardController <  ApplicationController
 	post '/cards/new' do
 		@user, @deck = current_info
 		@card = Card.create(
-			:deck_name => params[:deck_name],
-			:keywords => params[:keywords],
-			:shareable => params[:shareable],
-			:user_id => @user.id
+			:front => params[:front],
+			:back => params[:back],
+			:multiple_choice_or_input => params[:choice_type],
+			:user_id => @user.id,
+			:deck_id => @deck.id,
+			:frequency => 1
 			)
 
 		redirect to("/cards/#{@card.id}")
@@ -30,9 +32,9 @@ class CardController <  ApplicationController
 		@user, @deck = current_info
 		redirect to('/') if @card.user_id != current_user.id
 		@card.update(
-			:deck_name => params[:deck_name],
-			:keywords => params[:keywords],
-			:shareable => params[:shareable]
+			:front => params[:front],
+			:back => params[:back],
+			:multiple_choice_or_input => params[:choice_type]
 			)
 
 		redirect to("/cards/#{@card.id}")
