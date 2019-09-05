@@ -1,15 +1,11 @@
 class DeckController <  ApplicationController
 
 	get '/decks/new' do
-		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
 		@user = current_user
 		erb :'deck/new'
 	end
 
 	post '/decks/new' do
-		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
 		@user = current_user
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
