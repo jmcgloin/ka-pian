@@ -44,6 +44,7 @@ class DeckController <  ApplicationController
 		@user = current_user
 		@deck = Deck.find(params[:did])
 		@cards = Card.where(:deck_id => @deck.id)
+		session[:deck_id] = @deck.id
 
 		erb :'deck/show'
 	end

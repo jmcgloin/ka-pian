@@ -42,7 +42,11 @@ class UserController < ApplicationController
 		redirect to('/') if !correct_user?(params[:id])
 		@user = current_user
 		@decks = Deck.where(:user_id => @user.id)
+		session[:deck_id] = nil
+
 		erb :'user/show'
 	end
+
+	## add a delete route
 
 end

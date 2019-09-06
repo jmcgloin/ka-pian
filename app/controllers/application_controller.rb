@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get '/' do
+		headers "Cache-Control" => "no-cache"
 		logged_in? && (redirect to("/users/#{current_user.id}"))
 		erb :welcome
 	end
@@ -49,7 +50,7 @@ class ApplicationController < Sinatra::Base
 	  end
 	  
 	  def access_forbiden?(user_id)
-	  	redirect to("/users/#{current_user.id}") if user_id.to_s != current_user.id
+	  	redirect to("/users/#{current_user.id}") if user_id != current_user.id
 	  end
 	end
 

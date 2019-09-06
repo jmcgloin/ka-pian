@@ -15,7 +15,6 @@ class CardController <  ApplicationController
 			:deck_id => @deck.id,
 			:frequency => 1
 			)
-		binding.pry
 
 		redirect to("/cards/#{@card.id}")
 	end
@@ -23,8 +22,8 @@ class CardController <  ApplicationController
 	get '/cards/:cid/edit' do
 		@card = Card.find(params[:cid])
 		@user, @deck = current_info
-		access_forbiden?()
-		redirect to('/') if @card.user_id != @user.id
+		access_forbiden?(@card.user_id)
+		
 		erb :'card/edit'
 	end
 
