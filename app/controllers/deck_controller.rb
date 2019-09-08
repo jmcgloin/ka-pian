@@ -19,7 +19,7 @@ class DeckController <  ApplicationController
 
 	get '/decks/:did/edit' do
 		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
+		redirect to('/') if !current_user || (@deck.user_id != current_user.id)
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		@user = current_user
 		erb :'deck/edit'
@@ -47,6 +47,14 @@ class DeckController <  ApplicationController
 		session[:deck_id] = @deck.id
 
 		erb :'deck/show'
+	end
+
+	get '/decks/:did/study' do
+		@user = current_user
+		@deck = Deck.find(params[:did])
+		@cards = Card.where(:deck_id => @deck.id)
+
+		erb :'deck/study'
 	end
 
 	delete '/decks/:did/delete' do

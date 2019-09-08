@@ -21,8 +21,8 @@ class CardController <  ApplicationController
 
 	get '/cards/:cid/edit' do
 		@card = Card.find(params[:cid])
-		@user, @deck = current_info
 		access_forbiden?(@card.user_id)
+		@user, @deck = current_info
 		
 		erb :'card/edit'
 	end

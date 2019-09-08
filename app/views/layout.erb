@@ -4,24 +4,37 @@
 	<title>Ka Pian</title>
 	<link rel="icon" type="image/png" sizes="16x16" href="/public/favicon.ico">
 	<link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon-16x16.png">
+	<!-- <base href="/"> -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:700,900&display=swap&subset=chinese-traditional" rel="stylesheet" type="css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	
 </head>
 <body>
 	<header>
 
+		
 		<nav>
-			navbar goes here
-			<% @user ||= false %>
-			<%  if !!@user %>
-			<a href="/">Home</a>
-			<% end %>
-			
 
-			<% if @user %>
-			<a href="/users/logout">Logout</a>
-			<% end %>
+			<div class="nav-logo chinese">
+				<% @home ||= false %>
+				<%  if !@home %>
+				卡片
+				<% end %>
+			</div>
+			<div class="nav-links">
+				<% @user ||= false %>
+				<%  if !!@user %>
+				<a href="/">Home</a>
+				
+				<a href="/users/logout">Logout</a>
+				<% end %>
+			</div>
+			
 		</nav>
 	</header>
-<%= yield %>
+	<div id="main-container">
+		<%= yield %>
+	</div>
 	<footer>
 		the footer goes here
 	</footer>

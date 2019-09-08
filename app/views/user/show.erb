@@ -1,8 +1,10 @@
 <h1>Hello, <%= @user.username %></h1>
 <% if !@decks.empty? %>
 <h2>Current Decks</h2>
-<% @decks.each do |deck| %>
-<p><a href="/decks/<%= deck.id %>"><%= deck.deck_name %></a>
+<% @decks.each.with_index(1) do |deck, i| %>
+<h3><%= "#{i}: #{deck.deck_name}" %></h3>
+<a href="/decks/<%= deck.id %>">View this deck </a>
+<a href="/decks/<%= deck.id %>/study">Study this deck</a>
 	<span>
 		<form action="/decks/<%= deck.id %>/edit" method="GET">
 			<input type="submit" value="EDIT">
@@ -14,7 +16,6 @@
 			<input type="submit" value="DELETE"> <!-- maybe put in a delete get route with an "are you sure" -->
 		</form>
 	</span>
-</p>
 <% end %>
 <% else %>
 <p>You do not yet have any decks.  Would you like to create one?</p>
