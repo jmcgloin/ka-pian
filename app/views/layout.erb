@@ -24,9 +24,12 @@
 			<div class="nav-links">
 				<% @user ||= false %>
 				<%  if !!@user %>
-				<a href="/">Home</a>
-				
-				<a href="/users/logout">Logout</a>
+				<button onclick='window.location="/";' class="button-small">
+					Home
+				</button>
+				<button onclick='window.location="/users/logout %>";' class="button-small">
+					Logout
+				</button>
 				<% end %>
 			</div>
 			

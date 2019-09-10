@@ -1,23 +1,41 @@
-<h1>Hello, <%= @user.username %></h1>
+<div class="center">
+	<h1>Hello, <%= @user.username %></h1>
+</div>
 <% if !@decks.empty? %>
-<h2>Current Decks</h2>
-<% @decks.each.with_index(1) do |deck, i| %>
-<h3><%= "#{i}: #{deck.deck_name}" %></h3>
-<a href="/decks/<%= deck.id %>">View this deck </a>
-<a href="/decks/<%= deck.id %>/study">Study this deck</a>
-	<span>
-		<form action="/decks/<%= deck.id %>/edit" method="GET">
-			<input type="submit" value="EDIT">
-		</form>
-	</span>
-	<span>
-		<form action="/decks/<%= deck.id %>/delete" method=POST>
-			<input type="hidden" name="_method" value="DELETE">
-			<input type="submit" value="DELETE"> <!-- maybe put in a delete get route with an "are you sure" -->
-		</form>
-	</span>
-<% end %>
+	<div class="center">
+		<h2>Current Decks</h2>
+	</div>
+	<div class="center-column"> <!-- .center-column -->
+	<% @decks.each.with_index(1) do |deck, i| %>
+	
+		<div class="container deck-info"> <!-- .deck-info -->
+			<div class="container-left">
+				<h3><%= "#{i}: #{deck.deck_name}" %></h3>
+			</div>
+			<div class="container-right"> <!-- .container-right -->
+				<button onclick='window.location="/decks/<%= deck.id %>";' class="button-small">
+					View
+				</button>
+				<button onclick='window.location="/decks/<%= deck.id %>/study";' class="button-small">
+					Study
+				</button>
+					<form action="/decks/<%= deck.id %>/edit" method="GET">
+						<input type="submit" value="Edit">
+					</form>
+					<form action="/decks/<%= deck.id %>/delete" method=POST>
+						<input type="hidden" name="_method" value="DELETE">
+						<input type="submit" value="Delete">
+					</form>
+			</div> <!-- .container-right -->
+		</div> <!-- .deck-info -->
+	<% end %>
+	</div> <!-- .center-column -->
 <% else %>
-<p>You do not yet have any decks.  Would you like to create one?</p>
+	<div class="center-column">
+		<p>You do not yet have any decks.  Would you like to create one?</p>	
+	</div>
+	
 <% end %>
-<a href="/decks/new"><h2>Create a new deck</h2></a>
+<div class="center">
+	<button onclick="window.location='/decks/new';" class="button-large">Create a new deck</button>
+</div>

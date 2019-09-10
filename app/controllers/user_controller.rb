@@ -12,7 +12,7 @@ class UserController < ApplicationController
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			@error_message = "Oops! There's a problem with the info you entered. Please try again or <a href='/users/new'>Register</a>."
+			@error_message = true
 			erb :'user/login'
 		end
 	end
