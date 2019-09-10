@@ -1,11 +1,13 @@
 <h1>Edit this deck</h1>
-<form action="/decks/<%= @deck.id %>/edit" method="POST">
+<form action="/decks/<%= @deck.id %>/edit" method="POST" autocomplete="off">
 	<input type="hidden" name="_method" value="PUT">
 	<label for="deck_name">What is this deck's name?</label>
 	<input type="text" name="deck_name" id="deck_name" value="<%= @deck.deck_name %>">
 	<label for="keywords">What are some keywords to describe this deck? (Seperate by comma)</label>
 	<input type="text" name="keywords" id="keywords" value="<%= @deck.keywords %>">
-	<label for="shareable">Would you like this deck to be shareable with other users?</label>
-	<input type="text" name="shareable" id="shareable" value="<%= @deck.shareable %>">
+	<label class="switch">
+		<input type="checkbox" name="shareable" checked=<%= @shareable %>>
+		<span class="slider"></span>
+	</label>
 	<input type="submit" value="EDIT IT"><!-- maybe add a reset button -->
 </form>

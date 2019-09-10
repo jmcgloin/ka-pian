@@ -3,33 +3,37 @@
 </div>
 
 <% if !@cards.empty? %>
-<div class="center">
-	<h2>Current Cards</h2>	
-</div>
-<div class="center-column">
-	<% @cards.each do |card| %>
-	<div class="container card-info">
-		<div class="container-left">
-			<h3><%= card.front %></h3>	
-		</div>
-		<div class="container-right">
-			<button onclick='window.location="/cards/<%= card.id %>";' class="button-small">
-				View
-			</button>
-			<form action="/cards/<%= card.id %>/edit" method="GET">
-				<input type="submit" value="EDIT">
-			</form>
-			<form action="/cards/<%= card.id %>/delete" method=POST>
-				<input type="hidden" name="_method" value="DELETE">
-				<input type="submit" value="DELETE"> <!-- maybe put in a delete get route with an "are you sure" -->
-			</form>
-		</div>
+	<div class="center">
+		<h2>Current Cards</h2>	
 	</div>
-<% end %>
-<% else %>
-<p>You do not yet have any cards.  Would you like to create one?</p>
-<% end %>
-
+	<div class="center-column">
+		<% @cards.each do |card| %>
+		<div class="container card-info">
+			<div class="container-left">
+				<h3><%= card.front %></h3>	
+			</div>
+			<div class="container-right">
+				<button onclick='window.location="/cards/<%= card.id %>";' class="button-small">
+					View
+				</button>
+				<form action="/cards/<%= card.id %>/edit" method="GET">
+					<input type="submit" value="EDIT">
+				</form>
+				<form action="/cards/<%= card.id %>/delete" method=POST>
+					<input type="hidden" name="_method" value="DELETE">
+					<input type="submit" value="DELETE"> 
+				</form>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<% else %>
+		<div class="center-column">
+			<p>You do not yet have any cards.  Would you like to create one?</p>	
+		</div>
+	<% end %>
+<div class="center">
+	<button onclick="window.location='/cards/new';" class="button-large">
+		Create a new card
+	</button>
 </div>
-<a href="/cards/new"><h2>Create a new card</h2></a>
-<a href="/users/<%= @user.id %>">Back to user</a>
