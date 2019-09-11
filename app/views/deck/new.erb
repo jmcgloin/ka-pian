@@ -12,7 +12,7 @@
 	<!-- <label for="shareable" class="accessible-hidden">Would you like this deck to be shareable with other users?</label>
 	<input type="text" name="shareable" id="shareable"> -->
 	<label class="switch">
-	  <input type="checkbox" name="shareable">
+	  <input type="checkbox" name="selection">
 	  <span class="slider"></span>
 	</label>
 </div>
@@ -20,3 +20,8 @@
 	<input type="submit" value="CREATE IT"><!-- maybe add a clear button -->
 </div>
 </form>
+<div class="center">
+	<button onclick="window.location='/users/<%= @user.id %>';" class="button-small">
+		Cancel
+	</button>
+</div>

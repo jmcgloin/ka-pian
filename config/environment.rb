@@ -6,3 +6,4 @@ configure :development do
 end
 
 require_all 'app'
+require_all 'public'

@@ -1,13 +1,30 @@
 
-<div class="container center"><h1>Edit this card</h1></div>
+<div class="center">
+	<h1>Edit this card</h1>
+</div>
 <form action="/cards/<%= @card.id %>/edit" method="POST" autocomplete="off">
 	<input type="hidden" name="_method" value="PUT">
-	<label for="front">What should the question (front of card) say? </label>
-	<input type="text" name="front" id="front" value="<%= @card.front %>">
-	<label for="back">What is the correct answer (back of card)?</label>
-	<input type="text" name="back" id="back" value="<%= @card.back %>">
-	<label for="choice_type">Is this card multiple choice or input answer? </label>
-	<input type="text" name="choice_type" id="choice_type" value="<%= @card.multiple_choice_or_input %>">
-	<input type="submit" value="EDIT IT">
-	<a href="/cards/<%= @card.id %>">Cancel</a>
+	<div class="center">
+		
+	<label for="front" class="accessible-hidden">What should the question (front of card) say? </label>
+	<input
+		type="text" name="front" id="front" value="<%= @card.front %>" required
+		placeholder="What should the front of the card say?"
+		onclick="this.select()"
+	>
+	<label for="back" class="accessible-hidden">What is the correct answer (back of card)?</label>
+	<input
+		type="text" name="back" id="back" value="<%= @card.back %>" required
+		placeholder="What should the back of the card say?"
+		onclick="this.select()"
+	>
+	</div>
+	<div class="center">
+	<input type="submit" value="Edit it">
+	</div>
 </form>
+<div class="center">
+	<button onclick='window.location="/cards/<%= @card.id %>";' class="button-small">
+		Cancel
+	</button>
+</div>

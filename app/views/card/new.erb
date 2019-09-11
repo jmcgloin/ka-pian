@@ -1,11 +1,20 @@
-<h1>Add a card</h1>
+<div class="center">
+	<h1>Add a card</h1>
+</div>
 
 <form action="/cards/new" method="POST" autocomplete="off">
-	<label for="front">What should the question (front of card) say? </label>
-	<input type="text" name="front" id="front">
-	<label for="back">What is the correct answer (back of card)?</label>
-	<input type="text" name="back" id="back">
-	<label for="choice_type">Is this card multiple choice or input answer? </label>
-	<input type="text" name="choice_type" id="choice_type">
-	<input type="submit" value="CREATE IT">
+	<div class="center">	
+		<label for="front" class="accessible-hidden">What should the question (front of card) say? </label>
+		<input type="text" name="front" id="front" placeholder="What should the front of the card say?">
+		<label for="back" class="accessible-hidden">What is the correct answer (back of card)?</label>
+		<input type="text" name="back" id="back" placeholder="What should the back of the card say?">
+	</div>
+	<div class="center">
+		<input type="submit" value="CREATE IT">
+	</div>
 </form>
+<div class="center">
+	<button onclick="window.location='/decks/<%= @deck.id %>';" class="button-small">
+		Cancel
+	</button>
+</div>

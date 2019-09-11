@@ -1,8 +1,24 @@
-<h1>Hello, <%= @user.username %></h1>
+<div class="center">
+	<h1>Hello, <%= @user.username %></h1>
+</div>
+<div class="center">
+	
+<div class="card-info">
 <h2>Front of card: </h2>
 <p><%= @card.front %></p>
+</div>
+<div class="card-info">
+	
 <h2>Back of card:</h2>
 <p><%= @card.back %></p>
-<h2>This card is <%= @card.multiple_choice_or_input %></h2>
-<a href="/cards/<%= @card.id %>/edit">Edit this card</a>
-<a href="/decks/<%= @card.deck_id %>">Back to deck</a>
+</div>
+</div>
+<div class="center">
+	
+<button onclick='window.location="/cards/<%= @card.id %>/edit";' class="button-large">
+	Edit
+</button>
+<button onclick='window.location="/decks/<%= @card.deck_id %>";' class="button-large">
+	Back to Deck
+</button>
+</div>

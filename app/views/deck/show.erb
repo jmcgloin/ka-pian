@@ -8,7 +8,7 @@
 	</div>
 	<div class="center-column">
 		<% @cards.each do |card| %>
-		<div class="container card-info">
+		<div class="card-list">
 			<div class="container-left">
 				<h3><%= card.front %></h3>	
 			</div>
@@ -17,11 +17,11 @@
 					View
 				</button>
 				<form action="/cards/<%= card.id %>/edit" method="GET">
-					<input type="submit" value="EDIT">
+					<input type="submit" value="Edit">
 				</form>
 				<form action="/cards/<%= card.id %>/delete" method=POST>
 					<input type="hidden" name="_method" value="DELETE">
-					<input type="submit" value="DELETE"> 
+					<input type="submit" value="Delete"> 
 				</form>
 			</div>
 		</div>
@@ -35,5 +35,8 @@
 <div class="center">
 	<button onclick="window.location='/cards/new';" class="button-large">
 		Create a new card
+	</button>
+	<button onclick="window.location='/users/<%= @user.id %>';" class="button-large">
+		Back to decks list
 	</button>
 </div>

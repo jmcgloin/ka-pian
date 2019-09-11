@@ -7,7 +7,7 @@ class DeckController <  ApplicationController
 
 	post '/decks/new' do
 		@user = current_user
-		shareable = params[:shareable] ? "off" : "on"
+		shareable = params[:selection] ? "off" : "on"
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
