@@ -1,9 +1,18 @@
-<h1>Create an account!</h1>
+<div class="center">
+	<h1>Create an account!</h1>
+</div>
 <%= @error_message %>
 <form action="/users" method="POST" autocomplete="off">
-	<label for="username">Create a username: </label>
-	<input type="text" name="username" id="username">
-	<label for="password">Choose a password: </label>
-	<input type="password" name="password" id="password">
+	<div class="center">
+	<label for="username" class="accessible-hidden">Create a username: </label>
+	<input type="text" name="username" id="username" placeholder="Username" autofocus autocomplete="off" required>
+	<label for="password" class="accessible-hidden">Choose a password: </label>
+	<input type="password" name="password" id="password" placeholder="Password" required>
+	</div>
+	<div class="center">
 	<input type="submit" value="Register">
+	<button onclick='window.location="/";' class="button-large" type="button">
+		Cancel
+	</button>
+	</div>
 </form>

@@ -50,7 +50,7 @@ button:focus {
 
 button.button-large {
 	width: 20%;
-	margin: 5%;
+	margin: 2% 5%;
 }
 
 button.button-small {
@@ -245,7 +245,7 @@ div.error-message>a {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #f00;
+	background-color: #f4c6c6;
 	-webkit-transition: .4s;
 	transition: .4s;
 	border-radius: 17px;
@@ -253,7 +253,7 @@ div.error-message>a {
 
 .slider:before {
 	position: absolute;
-	content: "Shareable";
+	content: "Not Shareable";
 	line-height: 26px;
 	text-align: center;
 	height: 26px;
@@ -267,17 +267,16 @@ div.error-message>a {
 }
 
 input:checked + .slider {
-	background-color: #f4c6c6;
+	background-color: #f00;
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px #f4c6c6;
+	box-shadow: 0 0 1px #f00;
 }
 
 input:checked + .slider:before {
 	-webkit-transform: translateX(12px);
 	-ms-transform: translateX(12px);
 	transform: translateX(12px);
-
-	content: "Not Shareable";
+	content: "Shareable";
 }

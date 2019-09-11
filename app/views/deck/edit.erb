@@ -10,7 +10,7 @@
 	<label for="keywords" class="accessible-hidden">Keywords</label>
 	<input type="text" name="keywords" id="keywords" value="<%= @deck.keywords %>" placeholder="Keywords">
 	<label class="switch">
-		<input type="checkbox" name="shareable" checked=<%= @shareable %>>
+		<input type="checkbox" name="shareable" <%= @shareable %>>
 		<span class="slider"></span>
 	</label>
 	</div>

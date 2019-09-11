@@ -7,11 +7,11 @@ class DeckController <  ApplicationController
 
 	post '/decks/new' do
 		@user = current_user
-		shareable = params[:selection] ? "off" : "on"
+		# shareable = params[:selection] ? "off" : "on"
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
-			:shareable => shareable,
+			:shareable => params[:selection],
 			:user_id => @user.id
 			)
 		session[:deck_id] = @deck.id
@@ -23,6 +23,7 @@ class DeckController <  ApplicationController
 		redirect to('/') if !current_user || (@deck.user_id != current_user.id)
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		@user = current_user
+		@shareable = @deck.shareable ? "checked" : nil
 		erb :'deck/edit'
 	end
 
@@ -31,7 +32,7 @@ class DeckController <  ApplicationController
 		redirect to('/') if @deck.user_id != current_user.id
 		# add a check if a deck id that doesn't exist is entered directly to uri
 		@deck = Deck.find(params[:did])
-		@shareable = params[:shareable] ? "off" : "on"
+		@shareable = params[:shareable]
 		@deck.update(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
@@ -47,7 +48,6 @@ class DeckController <  ApplicationController
 		@deck = Deck.find(params[:did])
 		@cards = Card.where(:deck_id => @deck.id)
 		session[:deck_id] = @deck.id
-
 		erb :'deck/show'
 	end
 
