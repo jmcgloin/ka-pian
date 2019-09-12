@@ -10,7 +10,6 @@ class ApplicationController < Sinatra::Base
 	end
 
 
-
 	get '/' do
 		headers "Cache-Control" => "no-cache"
 		logged_in? && (redirect to("/users/#{current_user.id}"))

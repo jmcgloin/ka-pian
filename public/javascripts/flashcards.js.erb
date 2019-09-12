@@ -1,5 +1,6 @@
 
-let cards = [{front : 'I' , back : '我'}, {front : 'You' , back : '你'}];
+// let cards = [{front : 'I' , back : '我'}, {front : 'You' , back : '你'}];
+// let cards = 'hi'
 let flashcard = document.getElementById("flashcard");
 let answer = document.getElementById("answer");
 let card_index = 0;
@@ -7,6 +8,7 @@ let beginButton = document.getElementById('begin');
 let checkButton = document.getElementById('check');
 
 let study = () => {
+console.log(cards)
 	checkButton.disabled = false;
 	flashcard.innerHTML = cards[card_index].front;
 }
