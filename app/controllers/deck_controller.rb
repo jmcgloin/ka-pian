@@ -55,7 +55,7 @@ class DeckController <  ApplicationController
 		@user = current_user
 		@deck = Deck.find(params[:did])
 		@cards = Card.where(:deck_id => @deck.id)
-
+		@cards = @cards.shuffle
 		erb :'deck/study'
 	end
 
