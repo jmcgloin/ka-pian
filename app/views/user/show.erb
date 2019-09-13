@@ -16,6 +16,7 @@
 					View
 				</button>
 				<button onclick='window.location="/decks/<%= deck.id %>/study";' class="button-small">
+				<!-- <button onclick='getCards()' class="button-small"> -->
 					Study
 				</button>
 					<form action="/decks/<%= deck.id %>/edit" method="GET">
@@ -38,3 +39,4 @@
 <div class="center">
 	<button onclick="window.location='/decks/new';" class="button-large">Create a new deck</button>
 </div>
+<!-- <script src="/javascripts/flashcards.js" type="text/javascript"></script> -->
