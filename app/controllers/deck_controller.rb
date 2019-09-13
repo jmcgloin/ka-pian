@@ -17,6 +17,12 @@ class DeckController <  ApplicationController
 		redirect to("/users/#{@user.id}") # change this to deck/add cards page
 	end
 
+	get '/decks/cards'  do
+		@deck = current_deck
+		@cards = Card.where(:deck_id => @deck.id).shuffle
+		@cards.to_json
+	end
+
 	get '/decks/:did/edit' do
 		@deck = Deck.find(params[:did])
 		@user = access_forbiden?(@deck.user_id)
@@ -64,9 +70,9 @@ class DeckController <  ApplicationController
 		redirect to("users/#{current_user.id}")
 	end
 
-	error do
-		binding.pry
-		redirect '/'
-	end
+	# error do
+	# 	binding.pry
+	# 	redirect '/'
+	# end
 
 end
