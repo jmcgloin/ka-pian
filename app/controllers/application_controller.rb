@@ -37,11 +37,12 @@ class ApplicationController < Sinatra::Base
 	  end
 
 	  def current_user
-	    !!session[:user_id] && User.find_by(:id => session[:user_id])
+	    logged_in? && User.find_by(:id => session[:user_id])
 	  end
 
 	  def current_deck
 	  	Deck.find(session[:deck_id])
+	  	# do i need this for anything?
 	  end
 
 	  def current_info

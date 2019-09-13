@@ -31,7 +31,6 @@ class DeckController <  ApplicationController
 		@deck = Deck.find(params[:did])
 		redirect to('/') if @deck.user_id != current_user.id
 		# add a check if a deck id that doesn't exist is entered directly to uri
-		@deck = Deck.find(params[:did])
 		@shareable = params[:shareable]
 		@deck.update(
 			:deck_name => params[:deck_name],
@@ -43,7 +42,6 @@ class DeckController <  ApplicationController
 	end
 
 	get '/decks/:did' do
-
 		@user = current_user
 		@deck = Deck.find(params[:did])
 		@cards = Card.where(:deck_id => @deck.id)
@@ -52,8 +50,9 @@ class DeckController <  ApplicationController
 	end
 
 	get '/decks/:did/study' do
-		@user = current_user
 		@deck = Deck.find(params[:did])
+		redirect to('/') if @deck.user_id != current_user.id
+		@user = current_user
 		@cards = Card.where(:deck_id => @deck.id)
 		@cards = @cards.shuffle
 		erb :'deck/study'

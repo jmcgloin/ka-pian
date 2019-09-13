@@ -129,7 +129,27 @@ div.error-message>a {
 .card-area {
 	width: 260px;
 	height: 300px;
-	perspective: 600px;
+	perspective: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-area>i {
+	position: absolute;
+	font-size: 260px;
+	color: green;
+	visibility: hidden;
+}
+
+#checkmark {
+	color: green;
+	visibility: hidden;
+}
+
+#big-x {
+	color: red;
+	visibility: hidden;
 }
 
 .card-face {
@@ -141,17 +161,22 @@ div.error-message>a {
 	justify-content: center;
 	border: 1px solid red;
 	border-radius: 15px;
+	box-shadow: 5px 5px 5px 2px red;
 }
 
 .card-front {
 	display: flex;
-	background-color: #fff;
+	background: none;
 	text-align: center;
 }
 
 .card-back {
-	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	background: none;
 	transform: rotateY( 180deg );
+	align-items: center;
+	justify-content: center;
 }
 
 .card.is-flipped {
@@ -177,7 +202,7 @@ div.error-message>a {
 	border: 1px solid red;
 	border-radius: 15px;
 	text-align: center;
-	box-shadow: 5px 5px 5px 2px red
+	box-shadow: 5px 5px 5px 2px red;
 }
 
 .center {

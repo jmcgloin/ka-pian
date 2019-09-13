@@ -1,12 +1,22 @@
 <div class="center">
-	<div class="card-area" hidden="true">
-		<div class="card">
-			<div class="card-face card-front">
+	<div class="card-area" id="card-area">
+		<i class="far fa-check" id="checkmark"></i>
+		<i class="far fa-times" id="big-x"></i>
+		<div class="card" id="card" onclick="flipCard()">
+			<div class="card-face card-front" id="front">
 				Front
 			</div>
-			<div class="card-face card-back">
-				Back
+			<div class="card-face card-back" id="back">
+				<p id="question">Front</p>
+				<p id="correct-answer">Back</p>
 			</div>
 		</div>
 	</div>
+</div>
+<div class="center">
+	<input type="text" name="answer" id="answer" placeholder="Type your answer here">
+</div>
+<div class="center">
+	<button onclick="flipCard()" class="button-large" id="submit">Check</button>
+	<button onclick="nextCard()" class="button-large" id="next" disabled>Next</button>
 </div>
