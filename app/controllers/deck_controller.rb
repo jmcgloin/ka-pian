@@ -55,6 +55,13 @@ class DeckController <  ApplicationController
 		erb :'deck/study'
 	end
 
+	get '/decks/cards'  do
+		binding.pry
+		# @deck = current_deck
+		# @cards = Card.where(:deck_id => @deck.id).shuffle
+		# @cards
+	end
+
 	delete '/decks/:did/delete' do
 		@deck = Deck.find(params[:did])
 		@user = access_forbiden?(@deck.user_id)
