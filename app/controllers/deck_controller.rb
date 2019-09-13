@@ -61,6 +61,12 @@ class DeckController <  ApplicationController
 		erb :'deck/study'
 	end
 
+	get '/decks/:did/done' do
+		@deck = Deck.find(params[:did])
+		@user = access_forbiden?(@deck.user_id)
+		erb :'deck/done'
+	end
+
 	delete '/decks/:did/delete' do
 		@deck = Deck.find(params[:did])
 		@user = access_forbiden?(@deck.user_id)
@@ -74,5 +80,7 @@ class DeckController <  ApplicationController
 	# 	binding.pry
 	# 	redirect '/'
 	# end
+
+	puts 'deck'
 
 end

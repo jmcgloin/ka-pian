@@ -54,5 +54,6 @@ class ApplicationController < Sinatra::Base
 	  	end
 	  end
 	end
+	puts 'app'
 
 end

@@ -46,7 +46,8 @@ class UserController < ApplicationController
 
 		erb :'user/show'
 	end
-
-	## add a delete route
-
+	
+	get '/*' do
+		erb :not_found
+	end
 end

@@ -49,7 +49,7 @@ let nextCard = () => {
 		updateCard(0);
 		card_index++;
 	} else if (card_index >= cards.length) {
-		let redirect_url = `/decks/${cards[0].deckId}`
+		let redirect_url = `/decks/${cards[0].deckId}/done`
 		window.location = redirect_url
 		// probably show a completed view with option to do it again or end
 	} else {

@@ -58,4 +58,6 @@ class CardController <  ApplicationController
 		redirect to("/decks/#{@deck.id}")
 	end
 
+	puts 'card'
+
 end
