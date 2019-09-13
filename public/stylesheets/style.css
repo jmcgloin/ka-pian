@@ -161,7 +161,7 @@ div.error-message>a {
 	justify-content: center;
 	border: 1px solid red;
 	border-radius: 15px;
-	box-shadow: 5px 5px 5px 2px red;
+	box-shadow: 2px 2px 2px 1px red;
 }
 
 .card-front {
@@ -202,7 +202,7 @@ div.error-message>a {
 	border: 1px solid red;
 	border-radius: 15px;
 	text-align: center;
-	box-shadow: 5px 5px 5px 2px red;
+	box-shadow: 2px 2px 2px 1px red;
 }
 
 .center {

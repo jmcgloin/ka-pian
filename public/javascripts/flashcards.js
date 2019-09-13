@@ -8,7 +8,7 @@ let correctAnswer = document.getElementById("correct-answer");
 
 let flipCard = () => {
 	if(!card.classList.contains("is-flipped")){
-		submit.disabled = "true";
+		submit.disabled = true;
 		card.classList.toggle("is-flipped");
 		next.disabled = false;
 		checkAnswer();
@@ -22,7 +22,7 @@ let checkAnswer = () => {
 	} else if( card.classList.contains("is-flipped")) {
 		bigX.style.visibility =  "visible";
 	}
-
+	next.focus();
 }
 
 let nextCard = () => {
@@ -35,7 +35,10 @@ let nextCard = () => {
 		card.classList.toggle("is-flipped");
 		bigX.style.visibility = "hidden";
 		checkmark.style.visibility = "hidden";
-		submit.disabled = "false";
+		submit.disabled = false;
+		next.disabled = true;
+		answer.value = "";
+		answer.focus();
 		//load the answer into back.innerHTML
 	}
 }

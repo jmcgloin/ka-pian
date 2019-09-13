@@ -5,12 +5,16 @@
 <form action="/cards/new" method="POST" autocomplete="off">
 	<div class="center">	
 		<label for="front" class="accessible-hidden">What should the question (front of card) say? </label>
-		<input type="text" name="front" id="front" placeholder="What should the front of the card say?">
+		<input 
+			type="text" name="front" id="front" 
+			placeholder="What should the front of the card say?"
+			autocomplete="off" autofocus
+		>
 		<label for="back" class="accessible-hidden">What is the correct answer (back of card)?</label>
 		<input type="text" name="back" id="back" placeholder="What should the back of the card say?">
 	</div>
 	<div class="center">
-		<input type="submit" value="CREATE IT">
+		<input type="submit" value="Create it">
 	</div>
 </form>
 <div class="center">

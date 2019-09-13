@@ -1,13 +1,12 @@
 class DeckController <  ApplicationController
 
 	get '/decks/new' do
-		@user = current_user
+		@user = access_forbiden?(current_user.id)
 		erb :'deck/new'
 	end
 
 	post '/decks/new' do
-		@user = current_user
-		# shareable = params[:selection] ? "off" : "on"
+		@user = access_forbiden?(current_user.id)
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
@@ -20,17 +19,16 @@ class DeckController <  ApplicationController
 
 	get '/decks/:did/edit' do
 		@deck = Deck.find(params[:did])
-		redirect to('/') if !current_user || (@deck.user_id != current_user.id)
-		# add a check if a deck id that doesn't exist is entered directly to uri
-		@user = current_user
+		@user = access_forbiden?(@deck.user_id)
+		session[:deck_id] = @deck.id
 		@shareable = @deck.shareable ? "checked" : nil
 		erb :'deck/edit'
 	end
 
 	put '/decks/:did/edit' do
 		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
-		# add a check if a deck id that doesn't exist is entered directly to uri
+		@user = access_forbiden?(@deck.user_id)
+		session[:deck_id] = @deck.id
 		@shareable = params[:shareable]
 		@deck.update(
 			:deck_name => params[:deck_name],
@@ -42,26 +40,25 @@ class DeckController <  ApplicationController
 	end
 
 	get '/decks/:did' do
-		@user = current_user
 		@deck = Deck.find(params[:did])
-		@cards = Card.where(:deck_id => @deck.id)
+		@user = access_forbiden?(@deck.user_id)
 		session[:deck_id] = @deck.id
+		@cards = Card.where(:deck_id => @deck.id)
 		erb :'deck/show'
 	end
 
 	get '/decks/:did/study' do
 		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
-		@user = current_user
-		@cards = Card.where(:deck_id => @deck.id)
-		@cards = @cards.shuffle
+		@user = access_forbiden?(@deck.user_id)
+		session[:deck_id] = @deck.id
+		@cards = Card.where(:deck_id => @deck.id).shuffle
 		erb :'deck/study'
 	end
 
 	delete '/decks/:did/delete' do
 		@deck = Deck.find(params[:did])
-		redirect to('/') if @deck.user_id != current_user.id
-		# add a check if a deck id that doesn't exist is entered directly to uri
+		@user = access_forbiden?(@deck.user_id)
+		session[:deck_id] = nil
 		@deck.destroy
 
 		redirect to("users/#{current_user.id}")

@@ -39,7 +39,7 @@ class UserController < ApplicationController
 	end
 
 	get '/users/:id' do
-		redirect to('/') if !correct_user?(params[:id])
+		redirect to('/') if current_user.id.to_s != params[:id]
 		@user = current_user
 		@decks = Deck.where(:user_id => @user.id)
 		session[:deck_id] = nil

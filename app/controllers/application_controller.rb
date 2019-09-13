@@ -41,23 +41,16 @@ class ApplicationController < Sinatra::Base
 	  end
 
 	  def current_deck
-	  	Deck.find(session[:deck_id])
-	  	# do i need this for anything?
+	  	!!session[:deck_id] && Deck.find_by(:id => session[:deck_id])
 	  end
 
-	  def current_info
-	  	[current_user, current_deck]
-	  end
-
-	  def correct_user?(id)
-	  	logged_in? && (current_user.id.to_s == id.to_s)
-	  end
-	  
 	  def access_forbiden?(user_id)
-	  	if !current_user
+	  	if !logged_in?
 	  		redirect to('/')
 	  	elsif user_id != current_user.id
 	  		redirect to("/users/#{current_user.id}")
+	  	else
+	  		current_user
 	  	end
 	  end
 	end
