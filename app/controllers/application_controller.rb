@@ -49,7 +49,8 @@ class ApplicationController < Sinatra::Base
 	  	if !logged_in?
 	  		session.clear
 	  		redirect to('/')
-	  	elsif user_id != current_user.id
+	  	elsif user_id.to_s != current_user.id.to_s
+	  		binding.pry
 	  		session[:deck_id] = nil
 	  		redirect to("users/#{current_user.id}")
 	  	end

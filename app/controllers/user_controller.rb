@@ -33,7 +33,10 @@ class UserController < ApplicationController
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			@error_message = "Oops! There's a problem with the info you entered. Please try again."
+			error = @user.errors
+			flash[[:error]] = "Error: " + error.full_messages.to_sentence
+			redirect to('/users/new')
+			# binding.pry
 			# use flash here
 		end
 	end

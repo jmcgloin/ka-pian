@@ -47,13 +47,11 @@ let nextCard = () => {
 	if(card_index == 0) {
 		answer.focus();
 		updateCard(0);
-		card_index++;
 	} else if (card_index >= cards.length) {
+		console.log('done')
 		let redirect_url = `/decks/${cards[0].deckId}/done`
 		window.location = redirect_url
-		// probably show a completed view with option to do it again or end
 	} else {
-		updateCard(card_index)
 		card.classList.toggle("is-flipped");
 		bigX.style.visibility = "hidden";
 		checkmark.style.visibility = "hidden";
@@ -61,15 +59,18 @@ let nextCard = () => {
 		next.disabled = true;
 		answer.value = "";
 		answer.focus();
-		card_index++;
+		setTimeout( () => { updateCard(card_index) }, 100 );
+		// updateCard(card_index)
 	}
 }
 
 let updateCard = (i) => {
-	thiscard = cards[i];
-		front.innerHTML = cards[i].front;
-		question.innerHTML = cards[i].front;
-		correctAnswer.innerHTML = cards[i].back;
+	// thiscard = cards[i];
+	console.log(i)
+	front.innerHTML = cards[i].front;
+	question.innerHTML = cards[i].front;
+	correctAnswer.innerHTML = cards[i].back;
+	card_index++;
 }
 
 let getCards = () => {
