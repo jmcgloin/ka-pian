@@ -8,5 +8,4 @@ Dir[File.join(File.dirname(__FILE__), "app/controllers", "*.rb")].collect {|file
   use class_name
 end
 
-# use Rack::Static, :urls => ['/stylesheets', '/javascripts'], :root => 'public'
 run ApplicationController
