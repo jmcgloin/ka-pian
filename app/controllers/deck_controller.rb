@@ -28,6 +28,12 @@ class DeckController <  ApplicationController
 		@cards.shuffle!.to_json
 	end
 
+	get '/decks/notfound' do
+		@user = current_user
+		
+		erb :'deck/notfound'
+	end
+
 	get '/decks/:did/edit' do
 		helper(params[:did])
 		@shareable = @deck.shareable ? "checked" : nil
@@ -67,18 +73,22 @@ class DeckController <  ApplicationController
 
 	delete '/decks/:did' do
 		helper(params[:did])
-		@deck.destroy
 		session[:deck_id] = nil
+		@deck.destroy
+		
 
 		redirect to("users/#{current_user.id}")
 	end
 
 	def helper(did = nil)
-		@deck = Deck.find_by_id(did) || current_deck
+		caller_line = caller_locations.first.to_s.match(/\d+/)[0].to_i
+		@deck = Deck.find_by_id(did)
 		@user = !!@deck ? User.find_by_id(@deck.user_id) : current_user
 		@cards = @deck && Card.where(:deck_id => @deck.id)
 		session[:deck_id] = @deck && @deck.id
 		access_forbiden?(@user.id)
+
+		redirect to('/decks/notfound') if (!@deck && caller_line > 31)
 	end
 
 end

@@ -11,6 +11,7 @@ class CardController <  ApplicationController
 
 	get '/cards/notfound' do
 		@deck = current_deck
+		
 		erb :'card/notfound'
 	end
 
@@ -62,12 +63,13 @@ class CardController <  ApplicationController
 	end
 
 	def helper(cid = nil)
+		caller_line = caller_locations.first.to_s.match(/\d+/)[0].to_i
 		@card = Card.find_by_id(cid)
 		@user = !!@card ? User.find_by_id(@card.user_id) : current_user
 		@deck = !!@card ? Deck.find_by_id(@card.deck_id) : current_deck
 		access_forbiden?(@user.id)
 
-		redirect to('/cards/notfound') if !@card
+		redirect to('/cards/notfound') if (!@card && caller_line > 31)
 		
 	end
 
