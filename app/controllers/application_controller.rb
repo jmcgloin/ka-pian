@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
 	  enable :sessions
 	  set :session_secret, "password_security"
 	  set :public_folder, "/public"
+	  register Sinatra::Flash
 	end
 
 

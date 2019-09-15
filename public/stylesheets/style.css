@@ -94,6 +94,21 @@ input:hover[type="text"] {
 	cursor: text;
 }
 
+input:checked + .slider {
+	background-color: #f00;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #f00;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(12px);
+	-ms-transform: translateX(12px);
+	transform: translateX(12px);
+	content: "Shareable";
+}
+
 div.error-message {
 	min-height: 3rem;
 	line-height: 2rem;
@@ -247,6 +262,18 @@ div.error-message>a {
 	margin: 0.75rem 0;
 }
 
+.flash {
+	width: 100%;
+	padding: .75rem 0;
+	border: 1px  solid red;
+	border-radius: 5px;
+	font-size: 1.25rem;
+}
+.flash .close {
+	cursor: pointer;
+	font-weight: 900;
+}
+
 .logo-left {
   -ms-transform: rotate(-10deg); /* IE 9 */
   -webkit-transform: rotate(-10deg); /* Safari prior 9.0 */
@@ -335,17 +362,26 @@ div.error-message>a {
 	border-radius: 13px;
 }
 
-input:checked + .slider {
-	background-color: #f00;
+.tooltip {
+	position: relative;
 }
 
-input:focus + .slider {
-	box-shadow: 0 0 1px #f00;
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	width: 120px;
+	top: 105%;
+	left: 50%;
+	margin-left: -60px;
+	position: absolute;
+	z-index: 1;
 }
-
-input:checked + .slider:before {
-	-webkit-transform: translateX(12px);
-	-ms-transform: translateX(12px);
-	transform: translateX(12px);
-	content: "Shareable";
-}
+/*
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}*/

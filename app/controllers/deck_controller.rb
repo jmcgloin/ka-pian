@@ -24,8 +24,10 @@ class DeckController <  ApplicationController
 	end
 
 	get '/decks/cards'  do
-		helper
-		@cards.shuffle!.to_json
+		helper(current_deck.id)
+		
+		@cards = @cards.shuffle.to_json
+		
 	end
 
 	get '/decks/notfound' do
@@ -85,6 +87,7 @@ class DeckController <  ApplicationController
 		@deck = Deck.find_by_id(did)
 		@user = !!@deck ? User.find_by_id(@deck.user_id) : current_user
 		@cards = @deck && Card.where(:deck_id => @deck.id)
+		# binding.pry
 		session[:deck_id] = @deck && @deck.id
 		access_forbiden?(@user.id)
 

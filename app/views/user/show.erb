@@ -15,10 +15,11 @@
 				<button onclick='window.location="/decks/<%= deck.id %>";' class="button-small">
 					View
 				</button>
-				<% disabled = !(!!deck.card_count && deck.card_count > 0) %> <!-- add a tooltip when disabled -->
-				<button onclick='window.location="/decks/<%= deck.id %>/study";' class="button-small" disabled=<%= disabled %>>
+				<% disabled = !(!!deck.card_count && deck.card_count > 0) ? "disabled" : nil %>
+				<% location = disabled ? "/decks/#{deck.id}" : "/decks/#{deck.id}/study" %>
+				<button onclick='window.location="<%= location %>";' class="button-small tooltip <%= disabled %>" id="studyButton" >
 				<!-- <button onclick='getCards()' class="button-small"> -->
-					Study
+					Study<span class="tooltiptext" id="ttt">Create some cards to study first</span>
 				</button>
 					<form action="/decks/<%= deck.id %>/edit" method="GET">
 						<input type="submit" value="Edit">
@@ -40,4 +41,5 @@
 <div class="center">
 	<button onclick="window.location='/decks/new';" class="button-large">Create a new deck</button>
 </div>
+
 <!-- <script src="/javascripts/flashcards.js" type="text/javascript"></script> -->

@@ -26,7 +26,7 @@ class CardController <  ApplicationController
 			:frequency => 1
 			)
 		@deck.update(:card_count => @deck.card_count + 1)
-
+		
 		redirect to("/cards/#{@card.id}")
 	end
 

@@ -12,8 +12,8 @@ class UserController < ApplicationController
 			session[:user_id] = @user.id
 			redirect to("/users/#{@user.id}")
 		else
-			@error_message = true
-			erb :'user/login'
+			flash[:error] = "Your username or password do not match our records.  Please try again or&nbsp;<a href='/users/new'>Register</a>."
+			redirect to('/users/login')
 		end
 	end
 
