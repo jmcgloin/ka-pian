@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_01_054218) do
+ActiveRecord::Schema.define(version: 2019_09_14_112527) do
 
   create_table "cards", force: :cascade do |t|
     t.string "front"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_09_01_054218) do
     t.string "keywords"
     t.integer "shareable"
     t.integer "user_id"
+    t.integer "card_count"
   end
 
   create_table "users", force: :cascade do |t|
