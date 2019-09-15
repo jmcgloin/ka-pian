@@ -4,7 +4,7 @@
 
 <% if !@cards.empty? %>
 	<div class="center">
-		<h2>Current Cards</h2>	
+		<h2>Cards in "<%= @deck.deck_name %>" deck</h2>	
 	</div>
 	<div class="center-column">
 		<% @cards.each do |card| %>
@@ -19,7 +19,7 @@
 				<form action="/cards/<%= card.id %>/edit" method="GET">
 					<input type="submit" value="Edit">
 				</form>
-				<form action="/cards/<%= card.id %>/delete" method=POST>
+				<form action="/cards/<%= card.id %>" method=POST>
 					<input type="hidden" name="_method" value="DELETE">
 					<input type="submit" value="Delete"> 
 				</form>

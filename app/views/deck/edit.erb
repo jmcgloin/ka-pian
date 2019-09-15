@@ -1,10 +1,10 @@
 <div class="center">
 	<h1>Edit this deck</h1>
 </div>
-<form action="/decks/<%= @deck.id %>/edit" method="POST" autocomplete="off">
-	<div class="center">
+<form action="/decks/<%= @deck.id %>" method="POST" autocomplete="off">
 		
 	<input type="hidden" name="_method" value="PUT">
+	<div class="center">
 	<label for="deck_name" class="accessible-hidden">What is this deck's name?</label>
 	<input type="text" name="deck_name" id="deck_name" value="<%= @deck.deck_name %>" placeholder="What is this deck's name?">
 	<label for="keywords" class="accessible-hidden">Keywords</label>

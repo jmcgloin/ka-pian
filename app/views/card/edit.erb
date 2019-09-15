@@ -2,7 +2,7 @@
 <div class="center">
 	<h1>Edit this card</h1>
 </div>
-<form action="/cards/<%= @card.id %>/edit" method="POST" autocomplete="off">
+<form action="/cards/<%= @card.id %>" method="POST" autocomplete="off">
 	<input type="hidden" name="_method" value="PUT">
 	<div class="center">
 		
@@ -10,13 +10,13 @@
 	<input
 		type="text" name="front" id="front" value="<%= @card.front %>" required
 		placeholder="What should the front of the card say?"
-		onclick="this.select()"
+		onclick="this.select()" autofocus autocomplete="off"
 	>
 	<label for="back" class="accessible-hidden">What is the correct answer (back of card)?</label>
 	<input
 		type="text" name="back" id="back" value="<%= @card.back %>" required
 		placeholder="What should the back of the card say?"
-		onclick="this.select()"
+		onclick="this.select()" autocomplete="off"
 	>
 	</div>
 	<div class="center">

@@ -1,15 +1,21 @@
 class CardController <  ApplicationController
 
+
+	attr_accessor :user, :deck, :card
+
 	get '/cards/new' do
-		@user = access_forbiden?(current_user.id)
-		@deck = current_deck
+		helper
 
 		erb :'card/new'
 	end
 
-	post '/cards/new' do
-		@user = access_forbiden?(current_user.id)
+	get '/cards/notfound' do
 		@deck = current_deck
+		erb :'card/notfound'
+	end
+
+	post '/cards' do
+		helper
 		@card = Card.create(
 			:front => params[:front],
 			:back => params[:back],
@@ -18,22 +24,19 @@ class CardController <  ApplicationController
 			:deck_id => @deck.id,
 			:frequency => 1
 			)
+		@deck.update(:card_count => @deck.card_count + 1)
 
 		redirect to("/cards/#{@card.id}")
 	end
 
 	get '/cards/:cid/edit' do
-		@card = Card.find(params[:cid])
-		@user = access_forbiden?(@card.user_id)
-		@deck = current_deck
+		helper(params[:cid])
 		
 		erb :'card/edit'
 	end
 
-	put '/cards/:cid/edit' do
-		@card = Card.find(params[:cid])
-		@user = access_forbiden?(@card.user_id)
-		@deck = current_deck
+	put '/cards/:cid' do
+		helper(params[:cid])
 		@card.update(
 			:front => params[:front],
 			:back => params[:back],
@@ -44,20 +47,28 @@ class CardController <  ApplicationController
 	end
 
 	get '/cards/:cid' do
-		@card = Card.find(params[:cid])
-		@user = access_forbiden?(@card.user_id)
-		@deck = current_deck
+		helper(params[:cid])
+		
 		erb :'card/show'
+
 	end
 
-	delete '/cards/:cid/delete' do
-		@card = Card.find(params[:cid])
-		@user = access_forbiden?(@card.user_id)
-		@deck = current_deck
+	delete '/cards/:cid' do
+		helper(params[:cid])
 		@card.destroy
+		@deck.update(:card_count => @deck.card_count - 1)
+
 		redirect to("/decks/#{@deck.id}")
 	end
 
-	puts 'card'
+	def helper(cid = nil)
+		@card = Card.find_by_id(cid)
+		@user = !!@card ? User.find_by_id(@card.user_id) : current_user
+		@deck = !!@card ? Deck.find_by_id(@card.deck_id) : current_deck
+		access_forbiden?(@user.id)
+
+		redirect to('/cards/notfound') if !@card
+		
+	end
 
 end

@@ -1,40 +1,42 @@
 class DeckController <  ApplicationController
 
+
+	attr_accessor :user, :deck, :cards
+
 	get '/decks/new' do
-		@user = access_forbiden?(current_user.id)
+		helper
+
 		erb :'deck/new'
 	end
 
-	post '/decks/new' do
-		@user = access_forbiden?(current_user.id)
+	post '/decks' do
+		helper
 		@deck = Deck.create(
 			:deck_name => params[:deck_name],
 			:keywords => params[:keywords],
 			:shareable => params[:selection],
-			:user_id => @user.id
+			:user_id => @user.id,
+			:card_count => 0
 			)
 		session[:deck_id] = @deck.id
-		redirect to("/users/#{@user.id}") # change this to deck/add cards page
+
+		redirect to("/users/#{@user.id}")
 	end
 
 	get '/decks/cards'  do
-		@deck = current_deck
-		@cards = Card.where(:deck_id => @deck.id).shuffle
-		@cards.to_json
+		helper
+		@cards.shuffle!.to_json
 	end
 
 	get '/decks/:did/edit' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
-		session[:deck_id] = @deck.id
+		helper(params[:did])
 		@shareable = @deck.shareable ? "checked" : nil
+		
 		erb :'deck/edit'
 	end
 
-	put '/decks/:did/edit' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
-		session[:deck_id] = @deck.id
+	put '/decks/:did' do
+		helper(params[:did])
 		@shareable = params[:shareable]
 		@deck.update(
 			:deck_name => params[:deck_name],
@@ -46,41 +48,37 @@ class DeckController <  ApplicationController
 	end
 
 	get '/decks/:did' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
-		session[:deck_id] = @deck.id
-		@cards = Card.where(:deck_id => @deck.id)
+		helper(params[:did])
+
 		erb :'deck/show'
 	end
 
 	get '/decks/:did/study' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
-		session[:deck_id] = @deck.id
-		@cards = Card.where(:deck_id => @deck.id).shuffle
+		helper(params[:did])
+
 		erb :'deck/study'
 	end
 
 	get '/decks/:did/done' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
+		helper(params[:did])
+
 		erb :'deck/done'
 	end
 
-	delete '/decks/:did/delete' do
-		@deck = Deck.find(params[:did])
-		@user = access_forbiden?(@deck.user_id)
-		session[:deck_id] = nil
+	delete '/decks/:did' do
+		helper(params[:did])
 		@deck.destroy
+		session[:deck_id] = nil
 
 		redirect to("users/#{current_user.id}")
 	end
 
-	# error do
-	# 	binding.pry
-	# 	redirect '/'
-	# end
-
-	puts 'deck'
+	def helper(did = nil)
+		@deck = Deck.find_by_id(did) || current_deck
+		@user = !!@deck ? User.find_by_id(@deck.user_id) : current_user
+		@cards = @deck && Card.where(:deck_id => @deck.id)
+		session[:deck_id] = @deck && @deck.id
+		access_forbiden?(@user.id)
+	end
 
 end

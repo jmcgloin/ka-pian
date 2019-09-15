@@ -33,27 +33,26 @@ class ApplicationController < Sinatra::Base
 
 	helpers do
 	  def logged_in?
-	    !!session[:user_id]
+	    !!current_user
 	  end
 
 	  def current_user
-	    logged_in? && User.find_by(:id => session[:user_id])
+	    User.find_by_id(session[:user_id])
 	  end
 
 	  def current_deck
-	  	!!session[:deck_id] && Deck.find_by(:id => session[:deck_id])
+	  	Deck.find_by_id(session[:deck_id])
 	  end
 
 	  def access_forbiden?(user_id)
 	  	if !logged_in?
+	  		session.clear
 	  		redirect to('/')
 	  	elsif user_id != current_user.id
-	  		redirect to("/users/#{current_user.id}")
-	  	else
-	  		current_user
+	  		session[:deck_id] = nil
+	  		redirect to("users/#{current_user.id}")
 	  	end
 	  end
 	end
-	puts 'app'
 
 end

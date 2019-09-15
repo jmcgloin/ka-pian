@@ -15,14 +15,15 @@
 				<button onclick='window.location="/decks/<%= deck.id %>";' class="button-small">
 					View
 				</button>
-				<button onclick='window.location="/decks/<%= deck.id %>/study";' class="button-small">
+				<% disabled = !(!!deck.card_count && deck.card_count > 0) %> <!-- add a tooltip when disabled -->
+				<button onclick='window.location="/decks/<%= deck.id %>/study";' class="button-small" disabled=<%= disabled %>>
 				<!-- <button onclick='getCards()' class="button-small"> -->
 					Study
 				</button>
 					<form action="/decks/<%= deck.id %>/edit" method="GET">
 						<input type="submit" value="Edit">
 					</form>
-					<form action="/decks/<%= deck.id %>/delete" method=POST>
+					<form action="/decks/<%= deck.id %>" method=POST>
 						<input type="hidden" name="_method" value="DELETE">
 						<input type="submit" value="Delete">
 					</form>
