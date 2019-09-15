@@ -168,30 +168,25 @@ div.error-message>a {
 }
 
 .card-face {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
 	align-items: center;
-	justify-content: center;
+	backface-visibility: hidden;
+	background: none;
 	border: 1px solid red;
 	border-radius: 15px;
 	box-shadow: 2px 2px 2px 1px red;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
 }
 
 .card-front {
-	display: flex;
-	background: none;
-	text-align: center;
 }
 
 .card-back {
-	display: flex;
 	flex-direction: column;
-	background: none;
 	transform: rotateY( 180deg );
-	align-items: center;
-	justify-content: center;
 }
 
 .card.is-flipped {

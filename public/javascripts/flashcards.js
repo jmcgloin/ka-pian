@@ -59,7 +59,7 @@ let nextCard = () => {
 		next.disabled = true;
 		answer.value = "";
 		answer.focus();
-		setTimeout( () => { updateCard(card_index) }, 100 );
+		setTimeout( () => { updateCard(card_index) }, 500 );
 		// updateCard(card_index)
 	}
 }
