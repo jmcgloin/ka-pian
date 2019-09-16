@@ -80,7 +80,7 @@ let getCards = () => {
     		data.forEach((card) => {
     			cards.push({front: card.front, back: card.back, id: card.id, frequency: card.frequency, deckId: card.deck_id})
     		});
-    	nextCard();
+    nextCard();
     });
 };
 
