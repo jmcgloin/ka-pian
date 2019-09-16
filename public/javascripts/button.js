@@ -1,8 +1,11 @@
 let flash = document.getElementById('flash');
-let xButton = document.getElementById('x-button');
+let xButton = document.getElementById('x-button') || nil;
 
-xButton.addEventListener("click", e => {
-	flash.style.visibility = "hidden";
-	
-})
+if (!!xButton) {
+	xButton.addEventListener("click", e => {
+		flash.style.visibility = "hidden";
+		
+	});
+}
 
+//look into attaching to something that does exist  to preven not exist error
