@@ -36,8 +36,6 @@ class UserController < ApplicationController
 			error = @user.errors
 			flash[[:error]] = "Error: " + error.full_messages.to_sentence
 			redirect to('/users/new')
-			# binding.pry
-			# use flash here
 		end
 	end
 
