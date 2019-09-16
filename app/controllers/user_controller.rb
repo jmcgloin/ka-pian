@@ -47,8 +47,8 @@ class UserController < ApplicationController
 		erb :'user/show'
 	end
 	
-	get '/*' do
-		erb :not_found
-	end
+	# get '/*' do
+	# 	erb :not_found
+	# end
 
 end
