@@ -11,26 +11,12 @@ class ApplicationController < Sinatra::Base
 	end
 
 
-	get '/' do
+	get '/?' do
 		headers "Cache-Control" => "no-cache"
 		logged_in? && (redirect to("/users/#{current_user.id}"))
 		@home = true
 		erb :welcome
 	end
-
-	# not_found do
-	#   status 404
-	#   # erb :oops  write this later TODO
-	# end
-
-	# error do
-	# 	binding.pry
-	# 	redirect '/'
-	# end
-
-	# error ActiveRecord::RecordNotFound do
-	#   redirect '/'
-	# end
 
 	helpers do
 	  def logged_in?
