@@ -43,8 +43,8 @@ class ApplicationController < Sinatra::Base
 	  end
 	end
 
-	get '/*' do
-		erb :not_found
-	end
+	# get '/*' do
+	# 	erb :not_found
+	# end
 
 end
