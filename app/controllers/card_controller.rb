@@ -73,4 +73,8 @@ class CardController <  ApplicationController
 		
 	end
 
+	get '/*' do
+		erb :not_found
+	end
+
 end

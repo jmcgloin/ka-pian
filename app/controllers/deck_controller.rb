@@ -94,4 +94,8 @@ class DeckController <  ApplicationController
 		redirect to('/decks/notfound') if (!@deck && caller_line > 31)
 	end
 
+	# get '/*' do
+	# 	erb :not_found
+	# end
+
 end
