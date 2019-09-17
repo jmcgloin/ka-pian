@@ -36,15 +36,9 @@ class ApplicationController < Sinatra::Base
 	  		session.clear
 	  		redirect to('/')
 	  	elsif user_id.to_s != current_user.id.to_s
-	  		binding.pry
 	  		session[:deck_id] = nil
 	  		redirect to("users/#{current_user.id}")
 	  	end
 	  end
 	end
-
-	# get '/*' do
-	# 	erb :not_found
-	# end
-
 end

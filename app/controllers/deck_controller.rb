@@ -87,15 +87,10 @@ class DeckController <  ApplicationController
 		@deck = Deck.find_by_id(did)
 		@user = !!@deck ? User.find_by_id(@deck.user_id) : current_user
 		@cards = @deck && Card.where(:deck_id => @deck.id)
-		# binding.pry
 		session[:deck_id] = @deck && @deck.id
 		access_forbiden?(@user.id)
 
 		redirect to('/decks/notfound') if (!@deck && caller_line > 31)
 	end
-
-	# get '/*' do
-	# 	erb :not_found
-	# end
 
 end

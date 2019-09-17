@@ -7,5 +7,3 @@ if (!!xButton) {
 		
 	});
 }
-
-//look into attaching to something that does exist  to preven not exist error
