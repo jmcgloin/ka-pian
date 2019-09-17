@@ -48,6 +48,7 @@ class UserController < ApplicationController
 	end
 	
 	get '/*' do
+		@user = current_user
 		erb :not_found
 	end
 

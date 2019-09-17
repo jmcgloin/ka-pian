@@ -11,7 +11,6 @@
 	<h2>Kadi hiyo haipo</h2>
 	<h2>Cette carte n'existe pas</h2>
 	<h2>ไม่มีการ์ดใบนั้น</h2>
-	<% location = !!@deck ? 'window.location=/decks/<%= @deck.id %>' : 'window.location=/users/<%= @user.id %>' %>
-	<!-- <button onclick="window.location=<%= location %>" autofocus>Take me back</button> -->
-	<button onclick=<%= location %> autofocus>Take me back</button>
+	<button onclick="window.location='/users/<%= @user.id %>'" autofocus>Take me back</button>
+	
 </div>

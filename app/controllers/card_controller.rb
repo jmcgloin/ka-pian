@@ -11,6 +11,8 @@ class CardController <  ApplicationController
 
 	get '/cards/notfound' do
 		@deck = current_deck
+		@user = current_user
+		binding.pry
 		
 		erb :'card/notfound'
 	end
@@ -68,6 +70,7 @@ class CardController <  ApplicationController
 		@user = !!@card ? User.find_by_id(@card.user_id) : current_user
 		@deck = !!@card ? Deck.find_by_id(@card.deck_id) : current_deck
 		access_forbiden?(@user.id)
+		binding.pry
 
 		redirect to('/cards/notfound') if (!@card && caller_line > 31)
 		
