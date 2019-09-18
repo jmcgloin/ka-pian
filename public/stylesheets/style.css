@@ -315,6 +315,10 @@ div.error-message>a {
 	font-size: 2rem;
 }
 
+.social>a:visited {
+	color: red;
+}
+
 .switch {
 	margin: auto 0  auto 0;
 	position: relative;
