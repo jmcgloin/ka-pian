@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
 
 	get '/' do
-		headers "Cache-Control" => "no-cache"
+		headers "Cache-Control" => :no_cache
 		logged_in? && (redirect to("/users/#{current_user.id}"))
 		@home = true
 		erb :welcome
