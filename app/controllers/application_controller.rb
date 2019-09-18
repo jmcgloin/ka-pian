@@ -10,9 +10,13 @@ class ApplicationController < Sinatra::Base
 	  register Sinatra::Flash
 	end
 
+	before do
+		cache_control :no_cache
+	end
+
 
 	get '/' do
-		cache_control :no_cache
+		
 		logged_in? && (redirect to("/users/#{current_user.id}"))
 		@home = true
 		erb :welcome
