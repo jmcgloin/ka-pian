@@ -2,7 +2,7 @@
 
 Chinese language flashcard app in Sinatra
 
-[![Priorityze](http://img.youtube.com/vi/NfvY0KuZBMU/0.jpg)](https://youtu.be/NfvY0KuZBMU)
+[![Ka-Pian](http://img.youtube.com/vi/NfvY0KuZBMU/0.jpg)](https://youtu.be/NfvY0KuZBMU)
 
 # Ka-Pian
 
