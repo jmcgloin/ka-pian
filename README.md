@@ -2,6 +2,8 @@
 
 Chinese language flashcard app in Sinatra
 
+[![Priorityze](http://img.youtube.com/vi/NfvY0KuZBMU/0.jpg)](https://youtu.be/NfvY0KuZBMU)
+
 # Ka-Pian
 
 Sinatra CRUD, MVC app.  Flashcard app.
